@@ -20,15 +20,13 @@ public class Libro {
     public void prestar(){
         if (disponible) {
             cantidadDisponible--;
-            System.out.println("Libro prestado" + titulo);
 
             if (cantidadDisponible ==0){
                 disponible = false;
-                System.out.println("El libro" + titulo + "no esta disponible");
             }
             
         } else {
-            System.out.println("El libro" + titulo + "no esta disponible");
+            System.out.println("El libro" + titulo + " no se encuentra");
         }
     }
 
@@ -40,6 +38,7 @@ public class Libro {
     }
 
     public void mostrarInfo(){
+        System.out.println("---------------------------------------------------");
         System.out.println("Información del libro:");
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
@@ -99,7 +98,7 @@ public class Libro {
 
     @Override
     public String toString(){
-        return "Titulo:" + this.titulo+ "Autor:" + this.autor + "Genero:" + this.genero + "ISBN:" +this.ISBN + "Cantidad:" + cantidadDisponible + "Disponible" + disponible;
+        return "Titulo: " + this.titulo + "Autor: " + this.autor + "Genero: " + this.genero + "ISBN: " + this.ISBN + "Cantidad: " + cantidadDisponible + "Disponible: " + disponible;
     }
     
 }
